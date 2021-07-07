@@ -4,6 +4,8 @@
   position: relative;
   height: 52rem;
 
+  //Front side styles
+
   &__side {
     position: absolute;
     top: 0;
@@ -34,6 +36,22 @@
           $color-secondary-dark
         );
       }
+
+      &-2 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
     }
   }
 
@@ -58,6 +76,24 @@
           $color-secondary-dark
         ),
         url('../img/nat-5.jpg');
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to bottom right,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url('../img/nat-6.jpg');
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to bottom right,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url('../img/nat-7.jpg');
     }
   }
 
@@ -86,6 +122,22 @@
         rgba($color-secondary-dark, 0.85)
       );
     }
+
+    &-2 {
+      background-image: linear-gradient(
+        to bottom right,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+
+    &-3 {
+      background-image: linear-gradient(
+        to bottom right,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
   }
 
   &__details {
@@ -106,5 +158,30 @@
         }
       }
     }
+  }
+
+  //Card Back side / CTA styles
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
   }
 }
