@@ -24,16 +24,35 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.3s;
+
+    @include respond(tab-port) {
+      width: 90vw;
+      flex-wrap: wrap;
+    }
+
+    @include respond(phone) {
+      width: 90vw;
+    }
   }
 
   &__left {
     width: 33.33333%;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: flex;
+    }
   }
 
   &__img {
     width: 100%;
     object-fit: cover;
     display: block;
+
+    @include respond(tab-port) {
+      width: 50%;
+      display: inline;
+    }
   }
 
   &__right {
@@ -44,6 +63,10 @@
     align-items: flex-start;
     justify-content: center;
     padding: 2rem 3rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 
   &__text {
@@ -52,6 +75,10 @@
     column-count: 2;
     column-rule: 1px solid $color-grey-dark-2;
     hyphens: auto;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 
   &:target {
